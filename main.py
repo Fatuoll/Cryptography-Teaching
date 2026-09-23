@@ -1,12 +1,7 @@
 import sys
-from PyQt6.QtWidgets import QApplication, QMainWindow
-from Visual.Art import  Ui_MainWindow
+from PyQt6.QtWidgets import QApplication
 
-
-class Sluier(QMainWindow, Ui_MainWindow):
-    def __init__(self):
-        super().__init__()
-        self.setupUi(self)
+from src.Main.Connections import Sluier
 
 
 if __name__ == "__main__":

@@ -3728,7 +3728,7 @@
         <x>0</x>
         <y>0</y>
         <width>591</width>
-        <height>521</height>
+        <height>531</height>
        </rect>
       </property>
       <property name="currentIndex">
@@ -3885,7 +3885,7 @@ Sharing information. Easy!</string>
         <widget class="QRadioButton" name="rbtn_ersah1">
          <property name="geometry">
           <rect>
-           <x>420</x>
+           <x>430</x>
            <y>10</y>
            <width>16</width>
            <height>16</height>
@@ -3893,12 +3893,15 @@ Sharing information. Easy!</string>
          </property>
          <property name="text">
           <string/>
+         </property>
+         <property name="autoExclusive">
+          <bool>false</bool>
          </property>
         </widget>
         <widget class="QRadioButton" name="rbtn_ersah2">
          <property name="geometry">
           <rect>
-           <x>435</x>
+           <x>445</x>
            <y>10</y>
            <width>16</width>
            <height>16</height>
@@ -3906,12 +3909,15 @@ Sharing information. Easy!</string>
          </property>
          <property name="text">
           <string/>
+         </property>
+         <property name="autoExclusive">
+          <bool>false</bool>
          </property>
         </widget>
         <widget class="QRadioButton" name="rbtn_ersah4">
          <property name="geometry">
           <rect>
-           <x>465</x>
+           <x>475</x>
            <y>10</y>
            <width>16</width>
            <height>16</height>
@@ -3919,12 +3925,15 @@ Sharing information. Easy!</string>
          </property>
          <property name="text">
           <string/>
+         </property>
+         <property name="autoExclusive">
+          <bool>false</bool>
          </property>
         </widget>
         <widget class="QRadioButton" name="rbtn_ersah3">
          <property name="geometry">
           <rect>
-           <x>450</x>
+           <x>460</x>
            <y>10</y>
            <width>16</width>
            <height>16</height>
@@ -3932,12 +3941,15 @@ Sharing information. Easy!</string>
          </property>
          <property name="text">
           <string/>
+         </property>
+         <property name="autoExclusive">
+          <bool>false</bool>
          </property>
         </widget>
         <widget class="QRadioButton" name="rbtn_ersah6">
          <property name="geometry">
           <rect>
-           <x>495</x>
+           <x>505</x>
            <y>10</y>
            <width>16</width>
            <height>16</height>
@@ -3945,12 +3957,15 @@ Sharing information. Easy!</string>
          </property>
          <property name="text">
           <string/>
+         </property>
+         <property name="autoExclusive">
+          <bool>false</bool>
          </property>
         </widget>
         <widget class="QRadioButton" name="rbtn_ersah8">
          <property name="geometry">
           <rect>
-           <x>525</x>
+           <x>535</x>
            <y>10</y>
            <width>16</width>
            <height>16</height>
@@ -3958,12 +3973,15 @@ Sharing information. Easy!</string>
          </property>
          <property name="text">
           <string/>
+         </property>
+         <property name="autoExclusive">
+          <bool>false</bool>
          </property>
         </widget>
         <widget class="QRadioButton" name="rbtn_ersah7">
          <property name="geometry">
           <rect>
-           <x>510</x>
+           <x>520</x>
            <y>10</y>
            <width>16</width>
            <height>16</height>
@@ -3971,12 +3989,15 @@ Sharing information. Easy!</string>
          </property>
          <property name="text">
           <string/>
+         </property>
+         <property name="autoExclusive">
+          <bool>false</bool>
          </property>
         </widget>
         <widget class="QRadioButton" name="rbtn_ersah5">
          <property name="geometry">
           <rect>
-           <x>480</x>
+           <x>490</x>
            <y>10</y>
            <width>16</width>
            <height>16</height>
@@ -3984,12 +4005,15 @@ Sharing information. Easy!</string>
          </property>
          <property name="text">
           <string/>
+         </property>
+         <property name="autoExclusive">
+          <bool>false</bool>
          </property>
         </widget>
         <widget class="QRadioButton" name="rbtn_ersah9">
          <property name="geometry">
           <rect>
-           <x>540</x>
+           <x>550</x>
            <y>10</y>
            <width>16</width>
            <height>16</height>
@@ -3997,6 +4021,9 @@ Sharing information. Easy!</string>
          </property>
          <property name="text">
           <string/>
+         </property>
+         <property name="autoExclusive">
+          <bool>false</bool>
          </property>
         </widget>
        </widget>
@@ -4006,7 +4033,7 @@ Sharing information. Easy!</string>
           <x>0</x>
           <y>30</y>
           <width>151</width>
-          <height>451</height>
+          <height>461</height>
          </rect>
         </property>
         <property name="frameShape">
@@ -4150,7 +4177,7 @@ Sharing information. Easy!</string>
         <property name="geometry">
          <rect>
           <x>0</x>
-          <y>479</y>
+          <y>490</y>
           <width>591</width>
           <height>41</height>
          </rect>
@@ -4194,7 +4221,7 @@ Sharing information. Easy!</string>
           <x>150</x>
           <y>30</y>
           <width>441</width>
-          <height>451</height>
+          <height>461</height>
          </rect>
         </property>
         <property name="currentIndex">
@@ -4291,7 +4318,7 @@ Sharing information. Easy!</string>
             <x>0</x>
             <y>290</y>
             <width>441</width>
-            <height>161</height>
+            <height>171</height>
            </rect>
           </property>
           <property name="frameShape">
@@ -4306,11 +4333,14 @@ Sharing information. Easy!</string>
              <x>0</x>
              <y>30</y>
              <width>441</width>
-             <height>16</height>
+             <height>31</height>
             </rect>
            </property>
            <property name="text">
             <string>We start with two small prime numbers. They will be used to generate the RSA key pair.</string>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
            </property>
           </widget>
           <widget class="QLabel" name="lbl_ersawh1_wh">
@@ -4338,7 +4368,7 @@ Sharing information. Easy!</string>
             <x>0</x>
             <y>290</y>
             <width>441</width>
-            <height>161</height>
+            <height>171</height>
            </rect>
           </property>
           <property name="frameShape">
@@ -4466,7 +4496,7 @@ the public and private key.</string>
             <x>0</x>
             <y>290</y>
             <width>441</width>
-            <height>161</height>
+            <height>171</height>
            </rect>
           </property>
           <property name="frameShape">
@@ -4594,7 +4624,7 @@ the private exponent.</string>
             <x>0</x>
             <y>290</y>
             <width>441</width>
-            <height>161</height>
+            <height>171</height>
            </rect>
           </property>
           <property name="frameShape">
@@ -4738,7 +4768,7 @@ the public exponent.</string>
             <x>0</x>
             <y>290</y>
             <width>441</width>
-            <height>161</height>
+            <height>171</height>
            </rect>
           </property>
           <property name="frameShape">
@@ -4753,11 +4783,14 @@ the public exponent.</string>
              <x>0</x>
              <y>30</y>
              <width>441</width>
-             <height>21</height>
+             <height>31</height>
             </rect>
            </property>
            <property name="text">
             <string>We find d, the modular inverse of e modulo ф(n). It will become the private exponent.</string>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
            </property>
           </widget>
           <widget class="QLabel" name="lbl_ersawh5_wh">
@@ -4865,7 +4898,7 @@ the public exponent.</string>
             <x>0</x>
             <y>290</y>
             <width>441</width>
-            <height>161</height>
+            <height>171</height>
            </rect>
           </property>
           <property name="frameShape">
@@ -4916,6 +4949,9 @@ a public key and a private key.</string>
            <property name="text">
             <string>We have the key pair. You choose a small number as our message so that every calculation 
 can be easily observed.</string>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
            </property>
           </widget>
          </widget>
@@ -5260,7 +5296,7 @@ can be easily observed.</string>
             <x>0</x>
             <y>290</y>
             <width>441</width>
-            <height>161</height>
+            <height>171</height>
            </rect>
           </property>
           <property name="frameShape">
@@ -5308,7 +5344,7 @@ The result is the ciphertext. It can now be passed to the recipient.</string>
             <x>0</x>
             <y>290</y>
             <width>441</width>
-            <height>161</height>
+            <height>171</height>
            </rect>
           </property>
           <property name="frameShape">
@@ -5328,6 +5364,9 @@ The result is the ciphertext. It can now be passed to the recipient.</string>
            </property>
            <property name="text">
             <string>The ciphertext is transformed using the private  key. The original message is recovered.</string>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
            </property>
           </widget>
           <widget class="QLabel" name="lbl_ersawh8_wh">
@@ -5531,7 +5570,7 @@ The result is the ciphertext. It can now be passed to the recipient.</string>
             <x>0</x>
             <y>290</y>
             <width>441</width>
-            <height>161</height>
+            <height>171</height>
            </rect>
           </property>
           <property name="frameShape">
@@ -5701,15 +5740,18 @@ of the algorithm has been presented here.</string>
            <property name="geometry">
             <rect>
              <x>0</x>
-             <y>230</y>
+             <y>210</y>
              <width>441</width>
-             <height>51</height>
+             <height>71</height>
             </rect>
            </property>
            <property name="text">
             <string>Ultimately, the security of RSA relies on the fact, that given the product 
 of two large prime numbers, n = p × q, recovering the original prime factors p and q 
 is computationally far more difficult than multiplying them together.</string>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
            </property>
           </widget>
          </widget>
@@ -5723,7 +5765,7 @@ is computationally far more difficult than multiplying them together.</string>
           <x>0</x>
           <y>30</y>
           <width>151</width>
-          <height>451</height>
+          <height>461</height>
          </rect>
         </property>
         <property name="frameShape">
@@ -5880,7 +5922,7 @@ is computationally far more difficult than multiplying them together.</string>
         <property name="geometry">
          <rect>
           <x>0</x>
-          <y>479</y>
+          <y>490</y>
           <width>591</width>
           <height>41</height>
          </rect>
@@ -5965,19 +6007,6 @@ is computationally far more difficult than multiplying them together.</string>
         <widget class="QRadioButton" name="rbtn_eaesh1">
          <property name="geometry">
           <rect>
-           <x>400</x>
-           <y>10</y>
-           <width>16</width>
-           <height>16</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-        </widget>
-        <widget class="QRadioButton" name="rbtn_eaesh2">
-         <property name="geometry">
-          <rect>
            <x>415</x>
            <y>10</y>
            <width>16</width>
@@ -5987,21 +6016,11 @@ is computationally far more difficult than multiplying them together.</string>
          <property name="text">
           <string/>
          </property>
-        </widget>
-        <widget class="QRadioButton" name="rbtn_eaesh4">
-         <property name="geometry">
-          <rect>
-           <x>445</x>
-           <y>10</y>
-           <width>16</width>
-           <height>16</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string/>
+         <property name="autoExclusive">
+          <bool>false</bool>
          </property>
         </widget>
-        <widget class="QRadioButton" name="rbtn_eaesh3">
+        <widget class="QRadioButton" name="rbtn_eaesh2">
          <property name="geometry">
           <rect>
            <x>430</x>
@@ -6013,47 +6032,11 @@ is computationally far more difficult than multiplying them together.</string>
          <property name="text">
           <string/>
          </property>
-        </widget>
-        <widget class="QRadioButton" name="rbtn_eaesh6">
-         <property name="geometry">
-          <rect>
-           <x>475</x>
-           <y>10</y>
-           <width>16</width>
-           <height>16</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string/>
+         <property name="autoExclusive">
+          <bool>false</bool>
          </property>
         </widget>
-        <widget class="QRadioButton" name="rbtn_eaesh8">
-         <property name="geometry">
-          <rect>
-           <x>505</x>
-           <y>10</y>
-           <width>16</width>
-           <height>16</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-        </widget>
-        <widget class="QRadioButton" name="rbtn_eaesh7">
-         <property name="geometry">
-          <rect>
-           <x>490</x>
-           <y>10</y>
-           <width>16</width>
-           <height>16</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-        </widget>
-        <widget class="QRadioButton" name="rbtn_eaesh5">
+        <widget class="QRadioButton" name="rbtn_eaesh4">
          <property name="geometry">
           <rect>
            <x>460</x>
@@ -6065,8 +6048,43 @@ is computationally far more difficult than multiplying them together.</string>
          <property name="text">
           <string/>
          </property>
+         <property name="autoExclusive">
+          <bool>false</bool>
+         </property>
         </widget>
-        <widget class="QRadioButton" name="rbtn_eaesh9">
+        <widget class="QRadioButton" name="rbtn_eaesh3">
+         <property name="geometry">
+          <rect>
+           <x>445</x>
+           <y>10</y>
+           <width>16</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="autoExclusive">
+          <bool>false</bool>
+         </property>
+        </widget>
+        <widget class="QRadioButton" name="rbtn_eaesh6">
+         <property name="geometry">
+          <rect>
+           <x>490</x>
+           <y>10</y>
+           <width>16</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="autoExclusive">
+          <bool>false</bool>
+         </property>
+        </widget>
+        <widget class="QRadioButton" name="rbtn_eaesh8">
          <property name="geometry">
           <rect>
            <x>520</x>
@@ -6078,8 +6096,43 @@ is computationally far more difficult than multiplying them together.</string>
          <property name="text">
           <string/>
          </property>
+         <property name="autoExclusive">
+          <bool>false</bool>
+         </property>
         </widget>
-        <widget class="QRadioButton" name="rbtn_eaesh10">
+        <widget class="QRadioButton" name="rbtn_eaesh7">
+         <property name="geometry">
+          <rect>
+           <x>505</x>
+           <y>10</y>
+           <width>16</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="autoExclusive">
+          <bool>false</bool>
+         </property>
+        </widget>
+        <widget class="QRadioButton" name="rbtn_eaesh5">
+         <property name="geometry">
+          <rect>
+           <x>475</x>
+           <y>10</y>
+           <width>16</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="autoExclusive">
+          <bool>false</bool>
+         </property>
+        </widget>
+        <widget class="QRadioButton" name="rbtn_eaesh9">
          <property name="geometry">
           <rect>
            <x>535</x>
@@ -6091,6 +6144,25 @@ is computationally far more difficult than multiplying them together.</string>
          <property name="text">
           <string/>
          </property>
+         <property name="autoExclusive">
+          <bool>false</bool>
+         </property>
+        </widget>
+        <widget class="QRadioButton" name="rbtn_eaesh10">
+         <property name="geometry">
+          <rect>
+           <x>550</x>
+           <y>10</y>
+           <width>16</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="autoExclusive">
+          <bool>false</bool>
+         </property>
         </widget>
        </widget>
        <widget class="QStackedWidget" name="stw_eaes">
@@ -6099,7 +6171,7 @@ is computationally far more difficult than multiplying them together.</string>
           <x>150</x>
           <y>30</y>
           <width>441</width>
-          <height>451</height>
+          <height>461</height>
          </rect>
         </property>
         <property name="currentIndex">
@@ -6245,7 +6317,7 @@ is computationally far more difficult than multiplying them together.</string>
             <x>0</x>
             <y>290</y>
             <width>441</width>
-            <height>161</height>
+            <height>171</height>
            </rect>
           </property>
           <property name="frameShape">
@@ -6298,6 +6370,9 @@ We start with the message and the key.</string>
 The bytes are placed into the state column by column. All encryption transformations 
 are applied to this matrix.</string>
            </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
           </widget>
          </widget>
         </widget>
@@ -6308,7 +6383,7 @@ are applied to this matrix.</string>
             <x>0</x>
             <y>290</y>
             <width>441</width>
-            <height>161</height>
+            <height>171</height>
            </rect>
           </property>
           <property name="frameShape">
@@ -6539,7 +6614,7 @@ W7 = W6 XOR W3
             <x>0</x>
             <y>290</y>
             <width>441</width>
-            <height>161</height>
+            <height>171</height>
            </rect>
           </property>
           <property name="frameShape">
@@ -6560,6 +6635,9 @@ W7 = W6 XOR W3
            <property name="text">
             <string>Before the first round, AES combines every byte of the state with the corresponding byte 
 of the zero round key using XOR.</string>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
            </property>
           </widget>
           <widget class="QLabel" name="lbl_eaesmn3_wh">
@@ -6705,7 +6783,7 @@ of the zero round key using XOR.</string>
             <x>0</x>
             <y>290</y>
             <width>441</width>
-            <height>161</height>
+            <height>171</height>
            </rect>
           </property>
           <property name="frameShape">
@@ -6839,7 +6917,7 @@ B7 D0 E0 E1
             <x>0</x>
             <y>290</y>
             <width>441</width>
-            <height>161</height>
+            <height>171</height>
            </rect>
           </property>
           <property name="frameShape">
@@ -6860,6 +6938,9 @@ B7 D0 E0 E1
            <property name="text">
             <string>ShiftRows moves the bytes within each row. The first row stays unchanged, the second
 moves by one position, the third by two, and the fourth by three.</string>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
            </property>
           </widget>
           <widget class="QLabel" name="lbl_eaeswh5_wh">
@@ -6976,7 +7057,7 @@ Row 3: shift 3</string>
             <x>0</x>
             <y>290</y>
             <width>441</width>
-            <height>161</height>
+            <height>171</height>
            </rect>
           </property>
           <property name="frameShape">
@@ -6991,12 +7072,15 @@ Row 3: shift 3</string>
              <x>0</x>
              <y>30</y>
              <width>441</width>
-             <height>31</height>
+             <height>51</height>
             </rect>
            </property>
            <property name="text">
             <string>MixColumn transforms each column independently. The four bytes in a column 
 are mathematically combined using multiplication in the finite field GF(2⁸) and XOR.</string>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
            </property>
           </widget>
           <widget class="QLabel" name="lbl_eaeswh6_wh">
@@ -7306,7 +7390,7 @@ E0
             <x>0</x>
             <y>290</y>
             <width>441</width>
-            <height>161</height>
+            <height>171</height>
            </rect>
           </property>
           <property name="frameShape">
@@ -7321,11 +7405,14 @@ E0
              <x>0</x>
              <y>30</y>
              <width>441</width>
-             <height>21</height>
+             <height>31</height>
             </rect>
            </property>
            <property name="text">
             <string>The transformed State is XORed with the round key. This completes the first AES round.</string>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
            </property>
           </widget>
           <widget class="QLabel" name="lbl_eaeswh7_wh">
@@ -7353,7 +7440,7 @@ E0
             <x>0</x>
             <y>290</y>
             <width>441</width>
-            <height>161</height>
+            <height>171</height>
            </rect>
           </property>
           <property name="frameShape">
@@ -7368,7 +7455,7 @@ E0
              <x>0</x>
              <y>30</y>
              <width>441</width>
-             <height>31</height>
+             <height>41</height>
             </rect>
            </property>
            <property name="text">
@@ -7398,12 +7485,15 @@ transformations provides multiple layers of substitution, permutation, and mixin
              <x>0</x>
              <y>70</y>
              <width>441</width>
-             <height>31</height>
+             <height>51</height>
             </rect>
            </property>
            <property name="text">
             <string>The tenth round performs the final substitution and row shifting, then combines the State
 with the tenth round key. Unlike the previous rounds, it does not use MixColumns.</string>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
            </property>
           </widget>
          </widget>
@@ -7665,7 +7755,7 @@ with the tenth round key. Unlike the previous rounds, it does not use MixColumns
             <x>0</x>
             <y>290</y>
             <width>441</width>
-            <height>161</height>
+            <height>171</height>
            </rect>
           </property>
           <property name="frameShape">
@@ -7680,7 +7770,7 @@ with the tenth round key. Unlike the previous rounds, it does not use MixColumns
              <x>0</x>
              <y>30</y>
              <width>441</width>
-             <height>51</height>
+             <height>71</height>
             </rect>
            </property>
            <property name="text">
@@ -7688,6 +7778,9 @@ with the tenth round key. Unlike the previous rounds, it does not use MixColumns
 
 AES decryption uses the inverse transformations to undo the encryption process. 
 The first key used is the tenth round key.</string>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
            </property>
           </widget>
           <widget class="QLabel" name="lbl_eaeswh9_wh">
@@ -8006,7 +8099,7 @@ D8 30 80 5A</string>
             <x>0</x>
             <y>290</y>
             <width>441</width>
-            <height>161</height>
+            <height>171</height>
            </rect>
           </property>
           <property name="frameShape">
@@ -8162,12 +8255,15 @@ D8 30 80 5A</string>
              <x>0</x>
              <y>220</y>
              <width>441</width>
-             <height>31</height>
+             <height>51</height>
             </rect>
            </property>
            <property name="text">
             <string>AES is designed for efficient encryption and is significantly faster than many asymmetric 
 encryption algorithms, making it well suited for encrypting large amounts of data.</string>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
            </property>
           </widget>
          </widget>
@@ -8181,7 +8277,7 @@ encryption algorithms, making it well suited for encrypting large amounts of dat
           <x>0</x>
           <y>31</y>
           <width>151</width>
-          <height>451</height>
+          <height>461</height>
          </rect>
         </property>
         <property name="frameShape">
@@ -8284,7 +8380,7 @@ encryption algorithms, making it well suited for encrypting large amounts of dat
         <property name="frameShadow">
          <enum>QFrame::Raised</enum>
         </property>
-        <widget class="QPushButton" name="btn_eeccb_all">
+        <widget class="QPushButton" name="btn_eecch_all">
          <property name="geometry">
           <rect>
            <x>10</x>
@@ -8325,6 +8421,9 @@ encryption algorithms, making it well suited for encrypting large amounts of dat
          <property name="text">
           <string/>
          </property>
+         <property name="autoExclusive">
+          <bool>false</bool>
+         </property>
         </widget>
         <widget class="QRadioButton" name="rbtn_eecch2">
          <property name="geometry">
@@ -8337,6 +8436,9 @@ encryption algorithms, making it well suited for encrypting large amounts of dat
          </property>
          <property name="text">
           <string/>
+         </property>
+         <property name="autoExclusive">
+          <bool>false</bool>
          </property>
         </widget>
         <widget class="QRadioButton" name="rbtn_eecch4">
@@ -8351,6 +8453,9 @@ encryption algorithms, making it well suited for encrypting large amounts of dat
          <property name="text">
           <string/>
          </property>
+         <property name="autoExclusive">
+          <bool>false</bool>
+         </property>
         </widget>
         <widget class="QRadioButton" name="rbtn_eecch3">
          <property name="geometry">
@@ -8363,6 +8468,9 @@ encryption algorithms, making it well suited for encrypting large amounts of dat
          </property>
          <property name="text">
           <string/>
+         </property>
+         <property name="autoExclusive">
+          <bool>false</bool>
          </property>
         </widget>
         <widget class="QRadioButton" name="rbtn_eecch5">
@@ -8377,15 +8485,18 @@ encryption algorithms, making it well suited for encrypting large amounts of dat
          <property name="text">
           <string/>
          </property>
+         <property name="autoExclusive">
+          <bool>false</bool>
+         </property>
         </widget>
        </widget>
        <widget class="QStackedWidget" name="stw_eecc">
         <property name="geometry">
          <rect>
           <x>150</x>
-          <y>31</y>
+          <y>30</y>
           <width>441</width>
-          <height>451</height>
+          <height>461</height>
          </rect>
         </property>
         <property name="currentIndex">
@@ -8472,7 +8583,7 @@ encryption algorithms, making it well suited for encrypting large amounts of dat
             <x>0</x>
             <y>290</y>
             <width>441</width>
-            <height>161</height>
+            <height>171</height>
            </rect>
           </property>
           <property name="frameShape">
@@ -8506,7 +8617,7 @@ encryption algorithms, making it well suited for encrypting large amounts of dat
             <x>0</x>
             <y>290</y>
             <width>441</width>
-            <height>161</height>
+            <height>171</height>
            </rect>
           </property>
           <property name="frameShape">
@@ -8633,7 +8744,7 @@ encryption algorithms, making it well suited for encrypting large amounts of dat
             <x>0</x>
             <y>290</y>
             <width>441</width>
-            <height>161</height>
+            <height>171</height>
            </rect>
           </property>
           <property name="frameShape">
@@ -8710,9 +8821,9 @@ encryption algorithms, making it well suited for encrypting large amounts of dat
            <property name="geometry">
             <rect>
              <x>0</x>
-             <y>60</y>
+             <y>40</y>
              <width>441</width>
-             <height>41</height>
+             <height>61</height>
             </rect>
            </property>
            <property name="text">
@@ -8726,7 +8837,7 @@ encryption algorithms, making it well suited for encrypting large amounts of dat
            <property name="geometry">
             <rect>
              <x>0</x>
-             <y>160</y>
+             <y>150</y>
              <width>441</width>
              <height>41</height>
             </rect>
@@ -8742,9 +8853,9 @@ encryption algorithms, making it well suited for encrypting large amounts of dat
            <property name="geometry">
             <rect>
              <x>0</x>
-             <y>110</y>
+             <y>90</y>
              <width>421</width>
-             <height>51</height>
+             <height>71</height>
             </rect>
            </property>
            <property name="text">
@@ -8758,9 +8869,9 @@ encryption algorithms, making it well suited for encrypting large amounts of dat
            <property name="geometry">
             <rect>
              <x>0</x>
-             <y>200</y>
+             <y>180</y>
              <width>421</width>
-             <height>41</height>
+             <height>51</height>
             </rect>
            </property>
            <property name="text">
@@ -8774,9 +8885,9 @@ encryption algorithms, making it well suited for encrypting large amounts of dat
            <property name="geometry">
             <rect>
              <x>0</x>
-             <y>240</y>
+             <y>220</y>
              <width>421</width>
-             <height>41</height>
+             <height>61</height>
             </rect>
            </property>
            <property name="text">
@@ -8795,7 +8906,7 @@ encryption algorithms, making it well suited for encrypting large amounts of dat
             <x>0</x>
             <y>290</y>
             <width>441</width>
-            <height>161</height>
+            <height>171</height>
            </rect>
           </property>
           <property name="frameShape">
@@ -8874,7 +8985,7 @@ encryption algorithms, making it well suited for encrypting large amounts of dat
              <x>0</x>
              <y>100</y>
              <width>441</width>
-             <height>41</height>
+             <height>51</height>
             </rect>
            </property>
            <property name="text">
@@ -8890,7 +9001,7 @@ encryption algorithms, making it well suited for encrypting large amounts of dat
              <x>0</x>
              <y>160</y>
              <width>441</width>
-             <height>41</height>
+             <height>51</height>
             </rect>
            </property>
            <property name="text">
@@ -8925,7 +9036,7 @@ encryption algorithms, making it well suited for encrypting large amounts of dat
             <x>0</x>
             <y>290</y>
             <width>441</width>
-            <height>161</height>
+            <height>171</height>
            </rect>
           </property>
           <property name="frameShape">
@@ -9050,7 +9161,7 @@ encryption algorithms, making it well suited for encrypting large amounts of dat
         <property name="geometry">
          <rect>
           <x>0</x>
-          <y>480</y>
+          <y>490</y>
           <width>591</width>
           <height>41</height>
          </rect>
@@ -9094,7 +9205,7 @@ encryption algorithms, making it well suited for encrypting large amounts of dat
         <property name="geometry">
          <rect>
           <x>0</x>
-          <y>479</y>
+          <y>490</y>
           <width>591</width>
           <height>41</height>
          </rect>
@@ -9138,7 +9249,7 @@ encryption algorithms, making it well suited for encrypting large amounts of dat
           <x>0</x>
           <y>30</y>
           <width>151</width>
-          <height>451</height>
+          <height>461</height>
          </rect>
         </property>
         <property name="frameShape">
@@ -9219,7 +9330,7 @@ encryption algorithms, making it well suited for encrypting large amounts of dat
           <x>150</x>
           <y>30</y>
           <width>441</width>
-          <height>451</height>
+          <height>461</height>
          </rect>
         </property>
         <property name="currentIndex">
@@ -9290,9 +9401,9 @@ encryption algorithms, making it well suited for encrypting large amounts of dat
            <property name="geometry">
             <rect>
              <x>20</x>
-             <y>150</y>
+             <y>140</y>
              <width>411</width>
-             <height>31</height>
+             <height>51</height>
             </rect>
            </property>
            <property name="text">
@@ -9322,7 +9433,7 @@ encryption algorithms, making it well suited for encrypting large amounts of dat
             <x>0</x>
             <y>290</y>
             <width>441</width>
-            <height>161</height>
+            <height>171</height>
            </rect>
           </property>
           <property name="frameShape">
@@ -9356,7 +9467,7 @@ encryption algorithms, making it well suited for encrypting large amounts of dat
             <x>0</x>
             <y>290</y>
             <width>441</width>
-            <height>161</height>
+            <height>171</height>
            </rect>
           </property>
           <property name="frameShape">
@@ -9417,9 +9528,9 @@ encryption algorithms, making it well suited for encrypting large amounts of dat
            <property name="geometry">
             <rect>
              <x>0</x>
-             <y>60</y>
+             <y>50</y>
              <width>441</width>
-             <height>16</height>
+             <height>31</height>
             </rect>
            </property>
            <property name="text">
@@ -9534,7 +9645,7 @@ encryption algorithms, making it well suited for encrypting large amounts of dat
             <x>0</x>
             <y>290</y>
             <width>441</width>
-            <height>161</height>
+            <height>171</height>
            </rect>
           </property>
           <property name="frameShape">
@@ -9611,9 +9722,9 @@ encryption algorithms, making it well suited for encrypting large amounts of dat
            <property name="geometry">
             <rect>
              <x>0</x>
-             <y>140</y>
+             <y>120</y>
              <width>441</width>
-             <height>41</height>
+             <height>71</height>
             </rect>
            </property>
            <property name="text">
@@ -9648,7 +9759,7 @@ encryption algorithms, making it well suited for encrypting large amounts of dat
             <x>0</x>
             <y>290</y>
             <width>441</width>
-            <height>161</height>
+            <height>171</height>
            </rect>
           </property>
           <property name="frameShape">
@@ -9709,9 +9820,9 @@ encryption algorithms, making it well suited for encrypting large amounts of dat
            <property name="geometry">
             <rect>
              <x>0</x>
-             <y>60</y>
+             <y>70</y>
              <width>441</width>
-             <height>41</height>
+             <height>51</height>
             </rect>
            </property>
            <property name="text">
@@ -9725,7 +9836,7 @@ encryption algorithms, making it well suited for encrypting large amounts of dat
            <property name="geometry">
             <rect>
              <x>0</x>
-             <y>141</y>
+             <y>160</y>
              <width>441</width>
              <height>20</height>
             </rect>
@@ -9741,7 +9852,7 @@ encryption algorithms, making it well suited for encrypting large amounts of dat
            <property name="geometry">
             <rect>
              <x>0</x>
-             <y>100</y>
+             <y>120</y>
              <width>441</width>
              <height>41</height>
             </rect>
@@ -9784,7 +9895,7 @@ encryption algorithms, making it well suited for encrypting large amounts of dat
         <property name="frameShadow">
          <enum>QFrame::Raised</enum>
         </property>
-        <widget class="QPushButton" name="btn_eecdhb_all">
+        <widget class="QPushButton" name="btn_eecdhh_all">
          <property name="geometry">
           <rect>
            <x>10</x>
@@ -9816,19 +9927,6 @@ encryption algorithms, making it well suited for encrypting large amounts of dat
         <widget class="QRadioButton" name="rbtn_eecdhh1">
          <property name="geometry">
           <rect>
-           <x>490</x>
-           <y>10</y>
-           <width>16</width>
-           <height>16</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-        </widget>
-        <widget class="QRadioButton" name="rbtn_eecdhh2">
-         <property name="geometry">
-          <rect>
            <x>505</x>
            <y>10</y>
            <width>16</width>
@@ -9838,8 +9936,43 @@ encryption algorithms, making it well suited for encrypting large amounts of dat
          <property name="text">
           <string/>
          </property>
+         <property name="autoExclusive">
+          <bool>false</bool>
+         </property>
+        </widget>
+        <widget class="QRadioButton" name="rbtn_eecdhh2">
+         <property name="geometry">
+          <rect>
+           <x>520</x>
+           <y>10</y>
+           <width>16</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="autoExclusive">
+          <bool>false</bool>
+         </property>
         </widget>
         <widget class="QRadioButton" name="rbtn_eecdhh4">
+         <property name="geometry">
+          <rect>
+           <x>550</x>
+           <y>10</y>
+           <width>16</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="autoExclusive">
+          <bool>false</bool>
+         </property>
+        </widget>
+        <widget class="QRadioButton" name="rbtn_eecdhh3">
          <property name="geometry">
           <rect>
            <x>535</x>
@@ -9851,18 +9984,8 @@ encryption algorithms, making it well suited for encrypting large amounts of dat
          <property name="text">
           <string/>
          </property>
-        </widget>
-        <widget class="QRadioButton" name="rbtn_eecdhh3">
-         <property name="geometry">
-          <rect>
-           <x>520</x>
-           <y>10</y>
-           <width>16</width>
-           <height>16</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string/>
+         <property name="autoExclusive">
+          <bool>false</bool>
          </property>
         </widget>
        </widget>

@@ -1,9 +1,11 @@
 from PyQt6.QtWidgets import QMainWindow
 
+from src.Main.ConnectionsMainFunctions import SluierMainFunctionsMixin
+
 from src.Visual.Art import Ui_MainWindow
 
 
-class Sluier(QMainWindow, Ui_MainWindow):
+class Sluier(QMainWindow, Ui_MainWindow, SluierMainFunctionsMixin):
     def __init__(self):
         super().__init__()
         self.setupUi(self)
@@ -69,7 +71,14 @@ class Sluier(QMainWindow, Ui_MainWindow):
         self.cmbx_prsa_opr.currentIndexChanged.connect(lambda: self.operation(self.stw_prsa))
         self.cmbx_paes_opr.currentIndexChanged.connect(lambda: self.operation(self.stw_paes))
         self.cmbx_pbd_opr.currentIndexChanged.connect(lambda: self.operation(self.stw_pbd))
-        # RSA
+
+        self.rsa_practical_connection()
+        self.aes_practical_connection()
+        self.bd_practical_connection()
+        self.ecc_practical_connection()
+        self.educational_connection()
+
+    def rsa_practical_connection(self):
         # Encryption
         self.btn_prsaenc_genk.clicked.connect(lambda: self.generatekeys('RSA'))
         self.btn_prsaenc_rec.clicked.connect(lambda: self.prmodes('RSA', 'Recommended'))
@@ -83,19 +92,29 @@ class Sluier(QMainWindow, Ui_MainWindow):
         self.cmbx_prsaenc_prk.currentIndexChanged.connect(lambda: self.enterkeys(self.stw_prsaenc_prk, self.cmbx_prsaenc_prk,
                                                                                  'RSA', 'enc', signature=True))
 
+        self.chbx_prsaenc_addsign.clicked.connect(lambda: self.hidesign(self.chbx_prsaenc_addsign, 'RSA', 'enc'))
+        self.chbx_prsaenc_addsign.click()
+        self.chbx_prsaenc_addsign.click()
+
         self.btn_prsaenc_enc.clicked.connect(lambda: self.encryption('RSA'))
         self.btn_prsaenc_addkdep.clicked.connect(lambda: self.addkeysdepository('RSA'))
+
         # Decryption
         self.cmbx_prsadec_prk.currentIndexChanged.connect(lambda: self.enterkeys(self.stw_prsadec_prk, self.cmbx_prsadec_prk,
                                                                                  'RSA', 'dec'))
         self.cmbx_prsadec_pbk.currentIndexChanged.connect(lambda: self.enterkeys(self.stw_prsadec_pbk, self.cmbx_prsadec_pbk,
                                                                                  'RSA', 'dec', signature=True))
 
+        self.chbx_prsadec_vsign.clicked.connect(lambda: self.hidesign(self.chbx_prsadec_vsign, 'RSA', 'dec'))
+        self.chbx_prsadec_vsign.click()
+        self.chbx_prsadec_vsign.click()
+
         self.btn_prsadec_dec.clicked.connect(lambda: self.decryption('RSA'))
         self.btn_prsadec_addkdep.clicked.connect(lambda: self.addkeysdepository('RSA'))
 
         self.lbl_prsadec_signval.setEnabled(False)
-        # AES
+
+    def aes_practical_connection(self):
         # Encryption
         self.cmbx_paesenc_k.currentIndexChanged.connect(lambda: self.enterkeys(self.stw_paesenc_k, self.cmbx_paesenc_k,
                                                                                'AES', 'enc'))
@@ -103,13 +122,15 @@ class Sluier(QMainWindow, Ui_MainWindow):
         self.btn_paesenc_addkdep.clicked.connect(lambda: self.addkeysdepository('AES'))
 
         self.stw_paesenc_k.setEnabled(False)
+
         # Decryption
         self.cmbx_paesdec_k.currentIndexChanged.connect(lambda: self.enterkeys(self.stw_paesdec_k, self.cmbx_paesdec_k,
                                                                                'AES', 'dec'))
         self.btn_paesdec_dec.clicked.connect(lambda: self.decryption('AES'))
         self.btn_paesdec_addkdep.clicked.connect(lambda: self.addkeysdepository('AES'))
         self.lbl_paesdec_tagver.setEnabled(False)
-        # BigData
+
+    def bd_practical_connection(self):
         # Encryption
         self.btn_pbdenc_genk.clicked.connect(lambda: self.generatekeys('BD'))
         self.btn_pbdenc_rec.clicked.connect(lambda: self.prmodes('BD', 'Recommended'))
@@ -120,6 +141,10 @@ class Sluier(QMainWindow, Ui_MainWindow):
         self.cmbx_pbdenc_pad.currentIndexChanged.connect(lambda: self.hidesettings(self.cmbx_pbdenc_pad, 'BD', False))
         self.cmbx_pbdencs_sch.currentIndexChanged.connect(lambda: self.hidesettings(self.cmbx_pbdencs_sch, 'BD', True))
 
+        self.chbx_pbdenc_addsign.clicked.connect(lambda: self.hidesign(self.chbx_pbdenc_addsign, 'BD', 'enc'))
+        self.chbx_pbdenc_addsign.click()
+        self.chbx_pbdenc_addsign.click()
+
         self.cmbx_pbdenc_pbk.currentIndexChanged.connect(
             lambda: self.enterkeys(self.stw_pbdenc_pbk, self.cmbx_pbdenc_pbk, 'BD', 'enc'))
         self.cmbx_pbdenc_prk.currentIndexChanged.connect(
@@ -127,17 +152,23 @@ class Sluier(QMainWindow, Ui_MainWindow):
 
         self.btn_pbdenc_enc.clicked.connect(lambda: self.encryption('BD'))
         self.btn_pbdenc_addkdep.clicked.connect(lambda: self.addkeysdepository('BD'))
+
         # Decryption
         self.cmbx_pbddec_prk.currentIndexChanged.connect(
             lambda: self.enterkeys(self.stw_pbddec_prk, self.cmbx_pbddec_prk, 'BD', 'dec'))
         self.cmbx_pbddec_pbk.currentIndexChanged.connect(
             lambda: self.enterkeys(self.stw_pbddec_pbk, self.cmbx_pbddec_pbk, 'BD', 'dec', signature=True))
 
+        self.chbx_pbddec_vsign.clicked.connect(lambda: self.hidesign(self.chbx_pbddec_vsign, 'BD', 'dec'))
+        self.chbx_pbddec_vsign.click()
+        self.chbx_pbddec_vsign.click()
+
         self.btn_pbddec_dec.clicked.connect(lambda: self.decryption('BD'))
         self.btn_pbddec_addkdep.clicked.connect(lambda: self.addkeysdepository('BD'))
 
         self.lbl_pbddec_signval.setEnabled(False)
-        # ECC
+
+    def ecc_practical_connection(self):
         self.btn_peccg_genk.clicked.connect(lambda: self.generatekeys('ECC'))
         self.btn_peccg_addkdep.clicked.connect(lambda: self.addkeysdepository('ECC'))
 
@@ -148,6 +179,7 @@ class Sluier(QMainWindow, Ui_MainWindow):
         self.btn_peccex_dshk.clicked.connect(lambda: self.decryption('ECC'))
         self.btn_peccex_addkdep.clicked.connect(lambda: self.addkeysdepository('ECC', eccexchange=True))
 
+    def educational_connection(self):
         # Education tab
         self.btn_emn_rsa.clicked.connect(lambda: self.stw_edu.setCurrentWidget(self.pg_ersa))
         self.btn_emn_aes.clicked.connect(lambda: self.stw_edu.setCurrentWidget(self.pg_eaes))
@@ -248,14 +280,15 @@ class Sluier(QMainWindow, Ui_MainWindow):
                 self.cmbx_prsaenc_mgfhash.setEnabled(True)
                 self.lbl_prsaenc_lbl.setEnabled(True)
                 self.lne_prsaenc_lbl.setEnabled(True)
-                self.cmbx_prsaencs_sch.setCurrentText('RSA-PSS')
-                self.cmbx_prsaencs_sch.setEnabled(True)
-                self.cmbx_prsaencs_hash.setCurrentText('SHA-256')
-                self.cmbx_prsaencs_hash.setEnabled(True)
-                self.cmbx_prsaencs_mgfhash.setCurrentText('SHA-256')
-                self.cmbx_prsaencs_mgfhash.setEnabled(True)
-                self.cmbx_prsaencs_sl.setCurrentText('Maximum')
-                self.cmbx_prsaencs_sl.setEnabled(True)
+                if self.chbx_prsaenc_addsign.isChecked():
+                    self.cmbx_prsaencs_sch.setCurrentText('RSA-PSS')
+                    self.cmbx_prsaencs_sch.setEnabled(True)
+                    self.cmbx_prsaencs_hash.setCurrentText('SHA-256')
+                    self.cmbx_prsaencs_hash.setEnabled(True)
+                    self.cmbx_prsaencs_mgfhash.setCurrentText('SHA-256')
+                    self.cmbx_prsaencs_mgfhash.setEnabled(True)
+                    self.cmbx_prsaencs_sl.setCurrentText('Maximum')
+                    self.cmbx_prsaencs_sl.setEnabled(True)
         elif alg == 'BD':
             if mode == 'Recommended':
                 self.cmbx_pbdenc_inenc.setCurrentText('UTF-8')
@@ -283,14 +316,15 @@ class Sluier(QMainWindow, Ui_MainWindow):
                 self.cmbx_pbdenc_hash.setEnabled(True)
                 self.cmbx_pbdenc_mgfhash.setCurrentText('SHA-256')
                 self.cmbx_pbdenc_mgfhash.setEnabled(True)
-                self.cmbx_pbdencs_sch.setCurrentText('RSA-PSS')
-                self.cmbx_pbdencs_sch.setEnabled(True)
-                self.cmbx_pbdencs_hash.setCurrentText('SHA-256')
-                self.cmbx_pbdencs_hash.setEnabled(True)
-                self.cmbx_pbdencs_mgfhash.setCurrentText('SHA-256')
-                self.cmbx_pbdencs_mgfhash.setEnabled(True)
-                self.cmbx_pbdencs_sl.setCurrentText('Maximum')
-                self.cmbx_pbdencs_sl.setEnabled(True)
+                if self.chbx_pbdenc_addsign.isChecked():
+                    self.cmbx_pbdencs_sch.setCurrentText('RSA-PSS')
+                    self.cmbx_pbdencs_sch.setEnabled(True)
+                    self.cmbx_pbdencs_hash.setCurrentText('SHA-256')
+                    self.cmbx_pbdencs_hash.setEnabled(True)
+                    self.cmbx_pbdencs_mgfhash.setCurrentText('SHA-256')
+                    self.cmbx_pbdencs_mgfhash.setEnabled(True)
+                    self.cmbx_pbdencs_sl.setCurrentText('Maximum')
+                    self.cmbx_pbdencs_sl.setEnabled(True)
 
     def hidesettings(self, cmbxs, alg, signature):
         if alg == 'RSA':
@@ -359,6 +393,91 @@ class Sluier(QMainWindow, Ui_MainWindow):
                     self.lbl_pbdenc_mgfhash.setEnabled(True)
                     self.cmbx_pbdenc_mgfhash.setEnabled(True)
                     self.lbl_pbdenc_mgf.setEnabled(True)
+
+
+    def hidesign(self, chbxs, alg, mode):
+        if alg == 'RSA':
+            if mode == 'enc':
+                if chbxs.isChecked():
+                    self.lbl_prsaencs_sch.setEnabled(True)
+                    self.cmbx_prsaencs_sch.setEnabled(True)
+                    self.lbl_prsaencs_hash.setEnabled(True)
+                    self.cmbx_prsaencs_hash.setEnabled(True)
+                    self.lbl_prsaencs_mgfhash.setEnabled(True)
+                    self.cmbx_prsaencs_mgfhash.setEnabled(True)
+                    self.lbl_prsaencs_mgf.setEnabled(True)
+                    self.lbl_prsaencs_prk.setEnabled(True)
+                    self.cmbx_prsaenc_prk.setEnabled(True)
+                    self.stw_prsaenc_prk.setEnabled(True)
+                    self.lbl_prsaencs_sl.setEnabled(True)
+                    self.cmbx_prsaencs_sl.setEnabled(True)
+                else:
+                    self.lbl_prsaencs_sch.setEnabled(False)
+                    self.cmbx_prsaencs_sch.setEnabled(False)
+                    self.lbl_prsaencs_hash.setEnabled(False)
+                    self.cmbx_prsaencs_hash.setEnabled(False)
+                    self.lbl_prsaencs_mgfhash.setEnabled(False)
+                    self.cmbx_prsaencs_mgfhash.setEnabled(False)
+                    self.lbl_prsaencs_mgf.setEnabled(False)
+                    self.lbl_prsaencs_prk.setEnabled(False)
+                    self.cmbx_prsaenc_prk.setEnabled(False)
+                    self.stw_prsaenc_prk.setEnabled(False)
+                    self.lbl_prsaencs_sl.setEnabled(False)
+                    self.cmbx_prsaencs_sl.setEnabled(False)
+            elif mode == 'dec':
+                if chbxs.isChecked():
+                    self.lbl_prsadec_sign.setEnabled(True)
+                    self.pte_prsadec_sign.setEnabled(True)
+                    self.lbl_prsadec_pbk.setEnabled(True)
+                    self.cmbx_prsadec_pbk.setEnabled(True)
+                    self.stw_prsadec_pbk.setEnabled(True)
+                else:
+                    self.lbl_prsadec_sign.setEnabled(False)
+                    self.pte_prsadec_sign.setEnabled(False)
+                    self.lbl_prsadec_pbk.setEnabled(False)
+                    self.cmbx_prsadec_pbk.setEnabled(False)
+                    self.stw_prsadec_pbk.setEnabled(False)
+        elif alg == 'BD':
+            if mode == 'enc':
+                if chbxs.isChecked():
+                    self.lbl_pbdencs_sch.setEnabled(True)
+                    self.cmbx_pbdencs_sch.setEnabled(True)
+                    self.lbl_pbdencs_hash.setEnabled(True)
+                    self.cmbx_pbdencs_hash.setEnabled(True)
+                    self.lbl_pbdencs_mgfhash.setEnabled(True)
+                    self.cmbx_pbdencs_mgfhash.setEnabled(True)
+                    self.lbl_pbdencs_mgf.setEnabled(True)
+                    self.lbl_pbdencs_prk.setEnabled(True)
+                    self.cmbx_pbdenc_prk.setEnabled(True)
+                    self.stw_pbdenc_prk.setEnabled(True)
+                    self.lbl_pbdencs_sl.setEnabled(True)
+                    self.cmbx_pbdencs_sl.setEnabled(True)
+                else:
+                    self.lbl_pbdencs_sch.setEnabled(False)
+                    self.cmbx_pbdencs_sch.setEnabled(False)
+                    self.lbl_pbdencs_hash.setEnabled(False)
+                    self.cmbx_pbdencs_hash.setEnabled(False)
+                    self.lbl_pbdencs_mgfhash.setEnabled(False)
+                    self.cmbx_pbdencs_mgfhash.setEnabled(False)
+                    self.lbl_pbdencs_mgf.setEnabled(False)
+                    self.lbl_pbdencs_prk.setEnabled(False)
+                    self.cmbx_pbdenc_prk.setEnabled(False)
+                    self.stw_pbdenc_prk.setEnabled(False)
+                    self.lbl_pbdencs_sl.setEnabled(False)
+                    self.cmbx_pbdencs_sl.setEnabled(False)
+            elif mode == 'dec':
+                if chbxs.isChecked():
+                    self.lbl_pbddec_sign.setEnabled(True)
+                    self.pte_pbddec_sign.setEnabled(True)
+                    self.lbl_pbddec_pbk.setEnabled(True)
+                    self.cmbx_pbddec_pbk.setEnabled(True)
+                    self.stw_pbddec_pbk.setEnabled(True)
+                else:
+                    self.lbl_pbddec_sign.setEnabled(False)
+                    self.pte_pbddec_sign.setEnabled(False)
+                    self.lbl_pbddec_pbk.setEnabled(False)
+                    self.cmbx_pbddec_pbk.setEnabled(False)
+                    self.stw_pbddec_pbk.setEnabled(False)
 
     def enterkeys(self, container, cmbxs, alg, encdec, signature=False):
         if alg == 'RSA':
@@ -440,48 +559,6 @@ class Sluier(QMainWindow, Ui_MainWindow):
                     container.setCurrentWidget(self.pg_peccex_pbkdep)
                 elif cmbxs.currentText() == 'Enter':
                     container.setCurrentWidget(self.pg_peccex_pbkent)
-
-    def encryption(self, alg):
-        if alg == 'RSA':
-            pass
-        elif alg == 'AES':
-            pass
-        elif alg == 'BD':
-            pass
-
-    def decryption(self, alg):
-        if alg == 'RSA':
-            pass
-        elif alg == 'AES':
-            pass
-        elif alg == 'BD':
-            pass
-        elif alg == 'ECC':
-            pass
-
-    def addkeysdepository(self, alg, eccexchange=False):
-        if alg == 'RSA':
-            pass
-        elif alg == 'AES':
-            pass
-        elif alg == 'BD':
-            pass
-        elif alg == 'ECC':
-            if not eccexchange:
-                pass
-            else:
-                pass
-
-    def generatekeys(self, alg):
-        if alg == 'RSA':
-            pass
-        elif alg == 'BD':
-            pass
-        elif alg == 'ECC':
-            pass
-
-    def selectfile(self):
-        pass
 
     def backfurther(self, container, btns, method):
         if method == 'further':

@@ -1,6 +1,6 @@
 from PyQt6.QtWidgets import QMainWindow
 
-from src.Main.ConnectionsMainFunctions import SluierMainFunctionsMixin
+from src.UI.ConnectionsMainFunctions import SluierMainFunctionsMixin
 
 from src.Visual.Art import Ui_MainWindow
 
@@ -15,40 +15,40 @@ class Sluier(QMainWindow, Ui_MainWindow, SluierMainFunctionsMixin):
 
     def _setup(self):
         self.ersa_buttons = {
-            0: [self.rbtn_ersah1, self.chbx_ersal1],
-            1: [self.rbtn_ersah2, self.chbx_ersal2],
-            2: [self.rbtn_ersah3, self.chbx_ersal3],
-            3: [self.rbtn_ersah4, self.chbx_ersal4],
-            4: [self.rbtn_ersah5, self.chbx_ersal5],
-            5: [self.rbtn_ersah6, self.chbx_ersal6],
-            6: [self.rbtn_ersah7, self.chbx_ersal7],
-            7: [self.rbtn_ersah8, self.chbx_ersal8],
-            8: [self.rbtn_ersah9, self.chbx_ersal9]
+            0: (self.rbtn_ersah1, self.chbx_ersal1),
+            1: (self.rbtn_ersah2, self.chbx_ersal2),
+            2: (self.rbtn_ersah3, self.chbx_ersal3),
+            3: (self.rbtn_ersah4, self.chbx_ersal4),
+            4: (self.rbtn_ersah5, self.chbx_ersal5),
+            5: (self.rbtn_ersah6, self.chbx_ersal6),
+            6: (self.rbtn_ersah7, self.chbx_ersal7),
+            7: (self.rbtn_ersah8, self.chbx_ersal8),
+            8: (self.rbtn_ersah9, self.chbx_ersal9)
         }
         self.eaes_buttons = {
-            0: [self.rbtn_eaesh1, self.chbx_eaesl1],
-            1: [self.rbtn_eaesh2, self.chbx_eaesl2],
-            2: [self.rbtn_eaesh3, self.chbx_eaesl3],
-            3: [self.rbtn_eaesh4, self.chbx_eaesl4],
-            4: [self.rbtn_eaesh5, self.chbx_eaesl5],
-            5: [self.rbtn_eaesh6, self.chbx_eaesl6],
-            6: [self.rbtn_eaesh7, self.chbx_eaesl7],
-            7: [self.rbtn_eaesh8, self.chbx_eaesl8],
-            8: [self.rbtn_eaesh9, self.chbx_eaesl9],
-            9: [self.rbtn_eaesh10, self.chbx_eaesl10]
+            0: (self.rbtn_eaesh1, self.chbx_eaesl1),
+            1: (self.rbtn_eaesh2, self.chbx_eaesl2),
+            2: (self.rbtn_eaesh3, self.chbx_eaesl3),
+            3: (self.rbtn_eaesh4, self.chbx_eaesl4),
+            4: (self.rbtn_eaesh5, self.chbx_eaesl5),
+            5: (self.rbtn_eaesh6, self.chbx_eaesl6),
+            6: (self.rbtn_eaesh7, self.chbx_eaesl7),
+            7: (self.rbtn_eaesh8, self.chbx_eaesl8),
+            8: (self.rbtn_eaesh9, self.chbx_eaesl9),
+            9: (self.rbtn_eaesh10, self.chbx_eaesl10)
         }
         self.eecc_buttons = {
-            0: [self.rbtn_eecch1, self.chbx_eeccl1],
-            1: [self.rbtn_eecch2, self.chbx_eeccl2],
-            2: [self.rbtn_eecch3, self.chbx_eeccl3],
-            3: [self.rbtn_eecch4, self.chbx_eeccl4],
-            4: [self.rbtn_eecch5, self.chbx_eeccl5]
+            0: (self.rbtn_eecch1, self.chbx_eeccl1),
+            1: (self.rbtn_eecch2, self.chbx_eeccl2),
+            2: (self.rbtn_eecch3, self.chbx_eeccl3),
+            3: (self.rbtn_eecch4, self.chbx_eeccl4),
+            4: (self.rbtn_eecch5, self.chbx_eeccl5)
         }
         self.eecdh_buttons = {
-            0: [self.rbtn_eecdhh1, self.chbx_eecdhl1],
-            1: [self.rbtn_eecdhh2, self.chbx_eecdhl1],
-            2: [self.rbtn_eecdhh3, self.chbx_eecdhl1],
-            3: [self.rbtn_eecdhh4, self.chbx_eecdhl1]
+            0: (self.rbtn_eecdhh1, self.chbx_eecdhl1),
+            1: (self.rbtn_eecdhh2, self.chbx_eecdhl1),
+            2: (self.rbtn_eecdhh3, self.chbx_eecdhl1),
+            3: (self.rbtn_eecdhh4, self.chbx_eecdhl1)
         }
 
     def connection(self):
@@ -126,6 +126,7 @@ class Sluier(QMainWindow, Ui_MainWindow, SluierMainFunctionsMixin):
         # Decryption
         self.cmbx_paesdec_k.currentIndexChanged.connect(lambda: self.enterkeys(self.stw_paesdec_k, self.cmbx_paesdec_k,
                                                                                'AES', 'dec'))
+        self.lne_paesdec_aad.setReadOnly(True)
         self.btn_paesdec_dec.clicked.connect(lambda: self.decryption('AES'))
         self.btn_paesdec_addkdep.clicked.connect(lambda: self.addkeysdepository('AES'))
         self.lbl_paesdec_tagver.setEnabled(False)
@@ -511,6 +512,8 @@ class Sluier(QMainWindow, Ui_MainWindow, SluierMainFunctionsMixin):
             if encdec == 'enc':
                 if cmbxs.currentText() == 'Depository':
                     container.setCurrentWidget(self.pg_paesenc_dep)
+                elif cmbxs.currentText() == 'Password':
+                    container.setCurrentWidget(self.pg_paesenc_oth)
                 elif cmbxs.currentText() == 'Enter':
                     container.setCurrentWidget(self.pg_paesenc_oth)
                 elif cmbxs.currentText() == 'Generate':
@@ -594,3 +597,94 @@ class Sluier(QMainWindow, Ui_MainWindow, SluierMainFunctionsMixin):
                 btn[0].setChecked(False)
                 btn[1].setChecked(False)
         btns[container.currentIndex()][1].setChecked(False)
+
+    def getkeys(self, alg, encdec, signature=False):
+        if alg == 'RSA':
+            if encdec == 'enc':
+                if signature:
+                    if self.cmbx_prsaenc_prk.currentText() == 'Depository':
+                        return self.lne_prsaencds_prk.text(), self.lne_prsaencs_pass.text()
+                    elif self.cmbx_prsaenc_prk.currentText() == 'Enter':
+                        return self.lne_prsaences_prk.text(), None
+                    elif self.cmbx_prsaenc_prk.currentText() == 'Generate':
+                        return 'Generate', None
+                else:
+                    if self.cmbx_prsaenc_pbk.currentText() == 'Depository':
+                        return self.lne_prsaencd_pbk.text(), self.lne_prsaenc_pass.text()
+                    elif self.cmbx_prsaenc_pbk.currentText() == 'Enter':
+                        return self.lne_prsaence_pbk.text(), None
+                    elif self.cmbx_prsaenc_pbk.currentText() == 'Generate':
+                        return 'Generate', None
+            else:
+                if signature:
+                    if self.cmbx_prsadec_pbk.currentText() == 'Depository':
+                        return self.lne_prsadecds_pbk.text(), self.lne_prsadecs_pass.text()
+                    elif self.cmbx_prsadec_pbk.currentText() == 'Enter':
+                        return self.lne_prsadeces_pbk.text(), None
+                else:
+                    if self.cmbx_prsadec_prk.currentText() == 'Depository':
+                        return self.lne_prsadecd_prk.text(), self.lne_prsadec_pass.text()
+                    elif self.cmbx_prsadec_prk.currentText() == 'Enter':
+                        return self.lne_prsadece_prk.text(), None
+        elif alg == 'AES':
+            if encdec == 'enc':
+                if self.cmbx_paesenc_k.currentText() == 'Depository':
+                    return self.lne_paesencd_k.text(), self.lne_paesenc_pass.text()
+                elif self.cmbx_paesenc_k.currentText() == 'Password':
+                    return self.lne_paesenco_k.text(), None
+                elif self.cmbx_paesenc_k.currentText() == 'Enter':
+                    return self.lne_paesenco_k.text(), None
+                elif self.cmbx_paesenc_k.currentText() == 'Generate':
+                    return 'Generate', None
+                elif self.cmbx_paesenc_k.currentText() == 'ECC-key':
+                    return self.lne_paesenco_k.text(), 'ECC-key'
+            else:
+                if self.cmbx_paesdec_k.currentText() == 'Depository':
+                    return self.lne_paesdecd_k.text(), self.lne_paesdec_pass.text()
+                elif self.cmbx_paesdec_k.currentText() == 'Enter':
+                    return self.lne_paesdece_k.text(), None
+        elif alg == 'BD':
+            if encdec == 'enc':
+                if signature:
+                    if self.cmbx_pbdenc_prk.currentText() == 'Depository':
+                        return self.lne_pbdencds_prk.text(), self.lne_pbdencs_pass.text()
+                    elif self.cmbx_pbdenc_prk.currentText() == 'Enter':
+                        return self.lne_pbdences_prk.text(), None
+                    elif self.cmbx_pbdenc_prk.currentText() == 'Generate':
+                        return 'Generate', None
+                else:
+                    if self.cmbx_pbdenc_pbk.currentText() == 'Depository':
+                        return self.lne_pbdencd_pbk.text(), self.lne_pbdenc_pass.text()
+                    elif self.cmbx_pbdenc_pbk.currentText() == 'Enter':
+                        return self.lne_pbdence_pbk.text(), None
+                    elif self.cmbx_pbdenc_pbk.currentText() == 'Generate':
+                        return 'Generate', None
+            else:
+                if signature:
+                    if self.cmbx_pbddec_pbk.currentText() == 'Depository':
+                        return self.lne_pbddecds_pbk.text(), self.lne_pbddecs_pass.text()
+                    elif self.cmbx_pbddec_pbk.currentText() == 'Enter':
+                        return self.lne_pbddeces_pbk.text(), None
+                else:
+                    if self.cmbx_pbddec_prk.currentText() == 'Depository':
+                        return self.lne_pbddecd_prk.text(), self.lne_pbddec_pass.text()
+                    elif self.cmbx_pbddec_prk.currentText() == 'Enter':
+                        return self.lne_pbddece_prk.text(), None
+        elif alg == 'ECC':
+            '''signature=True - "Key exchange", signature=False - "Key generator"'''
+            if signature:
+                if encdec == 'prk':
+                    if self.cmbx_peccex_prk.currentText() == 'Depository':
+                        return self.lne_peccexd_prk.text(), self.lne_peccex_pass.text()
+                    elif self.cmbx_peccex_prk.currentText() == 'Enter':
+                        return self.lne_peccexe_prk.text(), None
+                else:
+                    if self.cmbx_peccex_pbk.currentText() == 'Depository':
+                        return self.lne_peccexd_pbk.text(), self.lne_peccex_pbkpass.text()
+                    elif self.cmbx_peccex_pbk.currentText() == 'Enter':
+                        return self.lne_peccexe_pbk.text(), None
+            else:
+                if encdec == 'prk':
+                    return self.lne_peccg_prk.text(), None
+                else:
+                    return self.lne_peccg_pbk.text(), None

@@ -1,7 +1,7 @@
 import sys
 from PyQt6.QtWidgets import QApplication
 
-from src.Main.Connections import Sluier
+from src.UI.Connections import Sluier
 
 
 if __name__ == "__main__":

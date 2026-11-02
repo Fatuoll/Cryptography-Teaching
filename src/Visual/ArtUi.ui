@@ -1589,6 +1589,11 @@
           </item>
           <item>
            <property name="text">
+            <string>Password</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
             <string>Depository</string>
            </property>
           </item>
@@ -2645,7 +2650,7 @@
            <string>Advanced</string>
           </property>
          </widget>
-         <widget class="QLabel" name="lbl_pbdenc_esf">
+         <widget class="QLabel" name="lbl_pbdenc_ssf">
           <property name="geometry">
            <rect>
             <x>0</x>
@@ -2655,10 +2660,10 @@
            </rect>
           </property>
           <property name="text">
-           <string>Esf-file:</string>
+           <string>Ssf-file:</string>
           </property>
          </widget>
-         <widget class="QLineEdit" name="lne_pbdenc_esf">
+         <widget class="QLineEdit" name="lne_pbdenc_ssf">
           <property name="geometry">
            <rect>
             <x>0</x>
@@ -2829,7 +2834,7 @@
            <string>Decypt</string>
           </property>
          </widget>
-         <widget class="QLabel" name="lbl_pbddec_esf">
+         <widget class="QLabel" name="lbl_pbddec_ssf">
           <property name="geometry">
            <rect>
             <x>0</x>
@@ -2839,7 +2844,7 @@
            </rect>
           </property>
           <property name="text">
-           <string>Esf-file:</string>
+           <string>Ssf-file:</string>
           </property>
          </widget>
          <widget class="QCheckBox" name="chbx_pbddec_vsign">
@@ -2983,7 +2988,7 @@
            <string>Select file</string>
           </property>
          </widget>
-         <widget class="QLineEdit" name="lne_pbddec_esf">
+         <widget class="QLineEdit" name="lne_pbddec_ssf">
           <property name="geometry">
            <rect>
             <x>80</x>
